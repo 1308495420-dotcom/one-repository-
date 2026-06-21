@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>待办助手</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <div class="header">
+      <h1>📝 待办助手</h1>
+      <div class="date" id="dateText"></div>
+    </div>
+
+    <!-- 输入卡片 -->
+    <div class="card">
+      <div class="input-row">
+        <input type="text" id="todoInput" placeholder="添加新任务..." maxlength="100">
+        <button id="addBtn">添加</button>
+      </div>
+
+      <!-- 筛选标签 -->
+      <div class="filters">
+        <button class="active" data-filter="all">全部</button>
+        <button data-filter="active">进行中</button>
+        <button data-filter="completed">已完成</button>
+      </div>
+
+      <!-- 任务列表 -->
+      <ul class="todo-list" id="todoList"></ul>
+
+      <!-- 底栏 -->
+      <div class="footer">
+        <span id="count">0 项任务</span>
+        <button id="clearBtn">清除已完成</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
